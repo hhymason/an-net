@@ -18,7 +18,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.work)
     implementation(libs.mason.util)
-    api(platform(libs.squareup.okhttp.bom))
     api(libs.squareup.okhttp)
     api(libs.squareup.retrofit)
 
