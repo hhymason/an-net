@@ -1,0 +1,4 @@
+gradle clean \
+assembleSnapshot \
+artifactoryPublish
+

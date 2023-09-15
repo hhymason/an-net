@@ -1,0 +1,10 @@
+<resources>
+    <string name="net_http_timeout">network timeout, please try again later%s</string>
+    <string name="net_network_error">network error, please try again later, %1$s%2$s</string>
+    <string name="net_server_side_break_proto_contract">response data from server side is mismatch</string>
+    <string name="net_http_non_200">HTTP code: %s</string>
+    <string name="net_dns_failure">domain name resolution failure</string>
+    <string name="net_connection_timeout_retry">connection timeout, start the %2$dth retry after %1$d seconds</string>
+    <string name="net_lan_desc">[local area network]</string>
+    <string name="net_cancel_request">cancel net request</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="net_http_timeout">网络超时，请稍后再试%s</string>
+    <string name="net_network_error">网络错误，请稍后再试，%1$s%2$s</string>
+    <string name="net_server_side_break_proto_contract">服务端响应数据不匹配</string>
+    <string name="net_http_non_200">HTTP code: %s</string>
+    <string name="net_dns_failure">域名解析失败</string>
+    <string name="net_connection_timeout_retry">连接超时，%1$d 秒后开始执行第 %2$d 次重试</string>
+    <string name="net_lan_desc">「局域网」</string>
+    <string name="net_cancel_request">取消网络请求</string>
+</resources>
