@@ -18,9 +18,9 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.work)
     implementation(libs.mason.util)
-    implementation(libs.squareup.okhttp)
-    implementation(platform(libs.squareup.okhttp.bom))
-    implementation(libs.squareup.retrofit)
+    api(platform(libs.squareup.okhttp.bom))
+    api(libs.squareup.okhttp)
+    api(libs.squareup.retrofit)
 
 }
 tasks.register<Jar>("androidSourcesJar") {
