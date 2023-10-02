@@ -10,7 +10,7 @@ object Apps {
     const val MINOR = 0
 
     /** 修正版本号. */
-    const val PATCH = 0
+    const val PATCH = 1
 
     const val APPLICATION_ID = "com.mason.net.sample"
 

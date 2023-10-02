@@ -26,6 +26,7 @@ import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import java.net.ConnectException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
@@ -74,8 +75,9 @@ abstract class BaseService {
         val contentType = "application/json; charset=utf-8".toMediaType()
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl(url())
-            .addCallAdapterFactory(FlowCallAdapterFactory.instance)
+            .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(json.asConverterFactory(contentType))
+            .addCallAdapterFactory(FlowCallAdapterFactory.instance)
         val client = buildClient {
             val headerInterceptor = HeaderRequestInterceptor { builder, url ->
                 headerBuilderBlock?.invoke(builder, url)

@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mason.net.sample.api.apiService
 import com.mason.util.appctx.appCtx
+import com.mason.util.toast.toast
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import okhttp3.ResponseBody
@@ -62,6 +63,20 @@ class AppViewModel : ViewModel() {
         isStop = true
         coroutineScope.cancel()
         job?.cancel()
+    }
+
+    fun getWeb() {
+        viewModelScope.launch {
+            val url = "https://qg.wealthyman.cn/h5/test.txt"
+            apiService.getWeb(url)
+                .onEach {
+                    toast(it)
+                }
+                .catch {
+                    it.printStackTrace()
+                }
+                .collect {}
+        }
     }
 
     private fun download() {

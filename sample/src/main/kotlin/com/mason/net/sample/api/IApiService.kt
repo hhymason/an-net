@@ -24,4 +24,7 @@ interface IApiService {
     @GET
     @Streaming
     fun downloadFromUrl(@Url url: String): Flow<ResponseBody>
+
+    @GET
+    fun getWeb(@Url url: String): Flow<String>
 }

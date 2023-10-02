@@ -20,7 +20,7 @@ dependencies {
     implementation(libs.mason.util)
     api(libs.squareup.okhttp)
     api(libs.squareup.retrofit)
-
+    api(libs.squareup.retrofit.scalars)
 }
 tasks.register<Jar>("androidSourcesJar") {
     from(android.sourceSets["main"].java.srcDirs)

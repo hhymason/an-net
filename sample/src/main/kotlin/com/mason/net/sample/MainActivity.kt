@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
 
             btnStart.setOnClickListener {
-                appViewModel.init()
+                appViewModel.getWeb()
             }
             btnStop.setOnClickListener {
                 appViewModel.stop()

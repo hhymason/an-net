@@ -40,6 +40,10 @@ class ApiService : BaseService() {
         )
     }
 
+     fun getWeb(url: String): Flow<String> {
+        return service.getWeb(url)
+    }
+
     fun downloadFromUrl(url: String): Flow<ResponseBody> {
         return service.downloadFromUrl(url)
     }
